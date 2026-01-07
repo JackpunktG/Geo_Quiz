@@ -1,0 +1,167 @@
+2-Letter-ISO-Code,Country-Name,Capital-City,Flag-Image-Path
+AF,Afghanistan,Kabul,assets/flags/af.png
+AL,Albania,Tirana,assets/flags/al.png
+DZ,Algeria,Algiers,assets/flags/dz.png
+AS,American Samoa,Pago Pago,assets/flags/as.png
+AD,Andorra,Andorra la Vella,assets/flags/ad.png
+AO,Angola,Luanda,assets/flags/ao.png
+AI,Anguilla,The Valley,assets/flags/ai.png
+AG,Antigua and Barbuda,St Johns,assets/flags/ag.png
+AR,Argentina,Buenos Aires,assets/flags/ar.png
+AM,Armenia,Yerevan,assets/flags/am.png
+AW,Aruba,Oranjestad,assets/flags/aw.png
+AU,Australia,Canberra,assets/flags/au.png
+AT,Austria,Vienna,assets/flags/at.png
+AZ,Azerbaijan,Baku,assets/flags/az.png
+BS,Bahamas,Nassau,assets/flags/bs.png
+BH,Bahrain,Manama,assets/flags/bh.png
+BD,Bangladesh,Dhaka,assets/flags/bd.png
+BB,Barbados,Bridgetown,assets/flags/bb.png
+BY,Belarus,Minsk,assets/flags/by.png
+BE,Belgium,Brussels,assets/flags/be.png
+BZ,Belize,Belmopan,assets/flags/bz.png
+BJ,Benin,Porto Novo,assets/flags/bj.png
+BM,Bermuda,Hamilton,assets/flags/bm.png
+BT,Bhutan,Thimphu,assets/flags/bt.png
+BO,Bolivia,La Paz,assets/flags/bo.png
+BA,Bosnia and Herzegovina,Sarajevo,assets/flags/ba.png
+BW,Botswana,Gaborone,assets/flags/bw.png
+BR,Brazil,Brasilia,assets/flags/br.png
+VG,British Virgin Islands,Road Town,assets/flags/vg.png
+BN,Brunei Darussalam,Bandar Seri Begawan,assets/flags/bn.png
+BG,Bulgaria,Sofia,assets/flags/bg.png
+BF,Burkina Faso,Ouagadougou,assets/flags/bf.png
+BI,Burundi,Gitega,assets/flags/bi.png
+CV,Cabo Verde,Praia,assets/flags/cv.png
+KH,Cambodia,Phnom Penh,assets/flags/kh.png
+CM,Cameroon,Yaounde,assets/flags/cm.png
+CA,Canada,Ottawa,assets/flags/ca.png
+KY,Cayman Islands,George Town,assets/flags/ky.png
+CF,Central African Republic,Bangui,assets/flags/cf.png
+TD,Chad,NDjamena,assets/flags/td.png
+JE,Jersey,St Helier,assets/flags/je.png
+GG,Guernsey,St Peter Port,assets/flags/gg.png
+CL,Chile,Santiago,assets/flags/cl.png
+CN,China,Beijing,assets/flags/cn.png
+CO,Colombia,Bogota,assets/flags/co.png
+KM,Comoros,Moroni,assets/flags/km.png
+CG,Congo,Brazzaville,assets/flags/cg.png
+CK,Cook Islands,Rarotonga,assets/flags/ck.png
+CR,Costa Rica,San Jose,assets/flags/cr.png
+CI,Cote dIvoire,Yamoussoukro,assets/flags/ci.png
+HR,Croatia,Zagreb,assets/flags/hr.png
+CU,Cuba,Havana,assets/flags/cu.png
+CW,Curacao,Willemstad,assets/flags/cw.png
+CY,Cyprus,Nicosia,assets/flags/cy.png
+CZ,Czechia,Prague,assets/flags/cz.png
+DK,Denmark,Copenhagen,assets/flags/dk.png
+DJ,Djibouti,Djibouti,assets/flags/dj.png
+DM,Dominica,Roseau,assets/flags/dm.png
+DO,Dominican Republic,Santo Domingo,assets/flags/do.png
+EC,Ecuador,Quito,assets/flags/ec.png
+EG,Egypt,Cairo,assets/flags/eg.png
+SV,El Salvador,San Salvador,assets/flags/sv.png
+GQ,Equatorial Guinea,Malabo,assets/flags/gq.png
+ER,Eritrea,Asmara,assets/flags/er.png
+EE,Estonia,Tallinn,assets/flags/ee.png
+ET,Ethiopia,Addis Ababa,assets/flags/et.png
+FO,Faroe Islands,Torshavn,assets/flags/fo.png
+FK,Falkland Islands,Stanley,assets/flags/fk.png
+FJ,Fiji,Suva,assets/flags/fj.png
+FI,Finland,Helsinki,assets/flags/fi.png
+FR,France,Paris,assets/flags/fr.png
+GF,French Guiana,Cayenne,assets/flags/gf.png
+PF,French Polynesia,Papeete,assets/flags/pf.png
+GA,Gabon,Libreville,assets/flags/ga.png
+GM,Gambia,Banjul,assets/flags/gm.png
+GE,Georgia,Tbilisi,assets/flags/ge.png
+DE,Germany,Berlin,assets/flags/de.png
+GH,Ghana,Accra,assets/flags/gh.png
+GI,Gibraltar,Gibraltar,assets/flags/gi.png
+GR,Greece,Athens,assets/flags/gr.png
+GL,Greenland,Nuuk,assets/flags/gl.png
+GD,Grenada,St Georges,assets/flags/gd.png
+GP,Guadeloupe,Basse Terre,assets/flags/gp.png
+GU,Guam,Hagatna,assets/flags/gu.png
+GT,Guatemala,Guatemala City,assets/flags/gt.png
+GN,Guinea,Conakry,assets/flags/gn.png
+GW,Guinea Bissau,Bissau,assets/flags/gw.png
+GY,Guyana,Georgetown,assets/flags/gy.png
+HT,Haiti,Port au Prince,assets/flags/ht.png
+VA,Holy See,Vatican City,assets/flags/va.png
+HN,Honduras,Tegucigalpa,assets/flags/hn.png
+HU,Hungary,Budapest,assets/flags/hu.png
+IS,Iceland,Reykjavik,assets/flags/is.png
+IN,India,New Delhi,assets/flags/in.png
+ID,Indonesia,Jakarta,assets/flags/id.png
+IR,Iran,Tehran,assets/flags/ir.png
+IQ,Iraq,Baghdad,assets/flags/iq.png
+IE,Ireland,Dublin,assets/flags/ie.png
+IM,Isle of Man,Douglas,assets/flags/im.png
+IL,Israel,Jerusalem,assets/flags/il.png
+IT,Italy,Rome,assets/flags/it.png
+JM,Jamaica,Kingston,assets/flags/jm.png
+JP,Japan,Tokyo,assets/flags/jp.png
+JO,Jordan,Amman,assets/flags/jo.png
+KZ,Kazakhstan,Astana,assets/flags/kz.png
+KE,Kenya,Nairobi,assets/flags/ke.png
+KI,Kiribati,South Tarawa,assets/flags/ki.png
+KW,Kuwait,Kuwait City,assets/flags/kw.png
+KG,Kyrgyzstan,Bishkek,assets/flags/kg.png
+LA,Laos,Vientiane,assets/flags/la.png
+LV,Latvia,Riga,assets/flags/lv.png
+LB,Lebanon,Beirut,assets/flags/lb.png
+LS,Lesotho,Maseru,assets/flags/ls.png
+LR,Liberia,Monrovia,assets/flags/lr.png
+LY,Libya,Tripoli,assets/flags/ly.png
+LI,Liechtenstein,Vaduz,assets/flags/li.png
+LT,Lithuania,Vilnius,assets/flags/lt.png
+LU,Luxembourg,Luxembourg,assets/flags/lu.png
+MA,Morocco,Rabat,assets/flags/ma.png
+MZ,Mozambique,Maputo,assets/flags/mz.png
+MM,Myanmar,Naypyidaw,assets/flags/mm.png
+NA,Namibia,Windhoek,assets/flags/na.png
+NP,Nepal,Kathmandu,assets/flags/np.png
+NL,Netherlands,Amsterdam,assets/flags/nl.png
+NZ,New Zealand,Wellington,assets/flags/nz.png
+NG,Nigeria,Abuja,assets/flags/ng.png
+NO,Norway,Oslo,assets/flags/no.png
+OM,Oman,Muscat,assets/flags/om.png
+PK,Pakistan,Islamabad,assets/flags/pk.png
+PA,Panama,Panama City,assets/flags/pa.png
+PE,Peru,Lima,assets/flags/pe.png
+PH,Philippines,Manila,assets/flags/ph.png
+PL,Poland,Warsaw,assets/flags/pl.png
+PT,Portugal,Lisbon,assets/flags/pt.png
+QA,Qatar,Doha,assets/flags/qa.png
+KR,Korea,Seoul,assets/flags/kr.png
+MD,Moldova,Chisinau,assets/flags/md.png
+RO,Romania,Bucharest,assets/flags/ro.png
+RU,Russia,Moscow,assets/flags/ru.png
+RW,Rwanda,Kigali,assets/flags/rw.png
+SA,Saudi Arabia,Riyadh,assets/flags/sa.png
+RS,Serbia,Belgrade,assets/flags/rs.png
+SG,Singapore,Singapore,assets/flags/sg.png
+SK,Slovakia,Bratislava,assets/flags/sk.png
+SI,Slovenia,Ljubljana,assets/flags/si.png
+SO,Somalia,Mogadishu,assets/flags/so.png
+ZA,South Africa,Pretoria,assets/flags/za.png
+ES,Spain,Madrid,assets/flags/es.png
+SE,Sweden,Stockholm,assets/flags/se.png
+CH,Switzerland,Bern,assets/flags/ch.png
+SY,Syria,Damascus,assets/flags/sy.png
+TH,Thailand,Bangkok,assets/flags/th.png
+TL,Timor Leste,Dili,assets/flags/tl.png
+TN,Tunisia,Tunis,assets/flags/tn.png
+TR,Turkey,Ankara,assets/flags/tr.png
+UA,Ukraine,Kyiv,assets/flags/ua.png
+AE,United Arab Emirates,Abu Dhabi,assets/flags/ae.png
+GB,United Kingdom,London,assets/flags/gb.png
+TZ,Tanzania,Dodoma,assets/flags/tz.png
+US,United States,Washington DC,assets/flags/us.png
+UY,Uruguay,Montevideo,assets/flags/uy.png
+UZ,Uzbekistan,Tashkent,assets/flags/uz.png
+VN,Vietnam,Hanoi,assets/flags/vn.png
+YE,Yemen,Sanaa,assets/flags/ye.png
+ZM,Zambia,Lusaka,assets/flags/zm.png
+ZW,Zimbabwe,Harare,assets/flags/zw.png
