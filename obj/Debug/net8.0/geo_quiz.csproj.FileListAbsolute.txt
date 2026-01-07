@@ -19,3 +19,4 @@
 /home/jack/Documents/Kurse/Csharp/geo_quiz/obj/Debug/net8.0/geo_quiz.pdb
 /home/jack/Documents/Kurse/Csharp/geo_quiz/obj/Debug/net8.0/geo_quiz.genruntimeconfig.cache
 /home/jack/Documents/Kurse/Csharp/geo_quiz/obj/Debug/net8.0/ref/geo_quiz.dll
+/home/jack/Documents/Kurse/Csharp/geo_quiz/obj/Debug/net8.0/geo_quiz.sourcelink.json

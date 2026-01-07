@@ -13,7 +13,7 @@ Used my C# binding for the [Cimple_UI lib](https://github.com/JackpunktG/Cimple_
 
 ### Examples
 
-![main_menu](examples/Mainmenu_Benutzer_create.gif)
+![main_menu](examples/mainmenu_Benutzer_create.gif)
 -> Creating new user
 
 ![quiz_one](examples/quiz1.gif)

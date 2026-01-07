@@ -43,7 +43,7 @@ public static class Windows
         TextBox addingTb = new(mainWindow, 50, 400, 300, 100);
 
         DropdownMenu modeDdm = new(mainWindow, "Modus", 50, 180, 280, 50);
-        modeDdm.Populate("Flag vom Laender\nFlagge vom Kapital\nLaender vom Flagge\nLaender vom Kapital\nKapital vom Flagge\nKapital vom Laender");
+        modeDdm.Populate("Flag vom Laender\nFlagge vom Hauptstadt\nLaender vom Flagge\nLaender vom Hauptstadt\nHauptstadt vom Flagge\nHauptstadt vom Laender");
         DropdownMenu userDdm = new(mainWindow, "Benutzer", 50, 100, 280, 50);
         userDdm.Populate(Benutzer.DDM_populate(benutzer));
 
@@ -171,16 +171,16 @@ public static class Windows
             switch (mode)
             {
                 case Quiz_mode.FLAGGE_VOM_LAENDER:
-                case Quiz_mode.FLAGGE_VOM_KAPITAL:
+                case Quiz_mode.FLAGGE_VOM_HAUPTSTADT:
                     Image frageI = new(quizWindow, landFrage.FlaggePfad, frageX, frageY, frageW, frageH);
                     break;
                 case Quiz_mode.LAENDER_VOM_FLAGGE:
-                case Quiz_mode.LAENDER_VOM_KAPITAL:
+                case Quiz_mode.LAENDER_VOM_HAUPTSTADT:
                     Label frageLandL = new(quizWindow, frageX, frageY, frageW, frageH, landFrage.Land, fontSize: (landFrage.Land.Length < 12) ? frageFontSize : (byte)100, color: frageColor);
                     break;
-                case Quiz_mode.KAPITAL_VOM_FLAGGE:
-                case Quiz_mode.KAPITAL_VOM_LAENDER:
-                    Label frageKapL = new(quizWindow, frageX, frageY, frageW, frageH, landFrage.Kapital, fontSize: (landFrage.Land.Length < 12) ? frageFontSize : (byte)100, color: frageColor);
+                case Quiz_mode.HAUPTSTADT_VOM_FLAGGE:
+                case Quiz_mode.HAUPTSTADT_VOM_LAENDER:
+                    Label frageKapL = new(quizWindow, frageX, frageY, frageW, frageH, landFrage.Hauptstadt, fontSize: (landFrage.Land.Length < 12) ? frageFontSize : (byte)100, color: frageColor);
                     break;
                 default:
                     Console.WriteLine("FEHLER - Frage Mode nicht richtig");
@@ -197,19 +197,19 @@ public static class Windows
             switch (mode)
             {
                 case Quiz_mode.FLAGGE_VOM_LAENDER:
-                case Quiz_mode.KAPITAL_VOM_LAENDER:
-                case Quiz_mode.LAENDER_VOM_KAPITAL:
-                case Quiz_mode.FLAGGE_VOM_KAPITAL:
-                    Label l1L = new(quizWindow, loesung1X, loesung1Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.KAPITAL_VOM_LAENDER) ? loesung1.Land : loesung1.Kapital,
+                case Quiz_mode.HAUPTSTADT_VOM_LAENDER:
+                case Quiz_mode.LAENDER_VOM_HAUPTSTADT:
+                case Quiz_mode.FLAGGE_VOM_HAUPTSTADT:
+                    Label l1L = new(quizWindow, loesung1X, loesung1Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.HAUPTSTADT_VOM_LAENDER) ? loesung1.Land : loesung1.Hauptstadt,
                             fontSize: (landFrage.Land.Length < 12) ? loesungFontSize : (byte)35, color: loesungColor);
-                    Label l2L = new(quizWindow, loesung2X, loesung2Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.KAPITAL_VOM_LAENDER) ? loesung2.Land : loesung2.Kapital,
+                    Label l2L = new(quizWindow, loesung2X, loesung2Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.HAUPTSTADT_VOM_LAENDER) ? loesung2.Land : loesung2.Hauptstadt,
                             fontSize: (landFrage.Land.Length < 12) ? loesungFontSize : (byte)35, color: loesungColor);
-                    Label l3L = new(quizWindow, loesung3X, loesung3Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.KAPITAL_VOM_LAENDER) ? loesung3.Land : loesung3.Kapital,
+                    Label l3L = new(quizWindow, loesung3X, loesung3Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.HAUPTSTADT_VOM_LAENDER) ? loesung3.Land : loesung3.Hauptstadt,
                             fontSize: (landFrage.Land.Length < 12) ? loesungFontSize : (byte)35, color: loesungColor);
-                    Label l4L = new(quizWindow, loesung4X, loesung4Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.KAPITAL_VOM_LAENDER) ? loesung4.Land : loesung4.Kapital,
+                    Label l4L = new(quizWindow, loesung4X, loesung4Y, loesungW, loesungH, (mode == Quiz_mode.FLAGGE_VOM_LAENDER || mode == Quiz_mode.HAUPTSTADT_VOM_LAENDER) ? loesung4.Land : loesung4.Hauptstadt,
                             fontSize: (landFrage.Land.Length < 12) ? loesungFontSize : (byte)35, color: loesungColor);
                     break;
-                case Quiz_mode.KAPITAL_VOM_FLAGGE:
+                case Quiz_mode.HAUPTSTADT_VOM_FLAGGE:
                 case Quiz_mode.LAENDER_VOM_FLAGGE:
                     Image l1I = new(quizWindow, loesung1.FlaggePfad, loesung1X + (BUFFER / 2), loesung1Y + (BUFFER / 2), loesungW - BUFFER, loesungH - BUFFER);
                     Image l2I = new(quizWindow, loesung2.FlaggePfad, loesung2X + (BUFFER / 2), loesung2Y + (BUFFER / 2), loesungW - BUFFER, loesungH - BUFFER);
@@ -300,8 +300,8 @@ public static class Windows
             LaenderDaten f = laender.First(l => l.ISO_code == fragen[i].Frage);
             LaenderDaten a = laender.First(l => l.ISO_code == fragen[i].BenutzerLoesung);
             Image imgf = new(statWindow, f.FlaggePfad, x - 100, y + (h * i), 50, 30);
-            Label frage = new(statWindow, x, y + (h * i), w, h, $"{f.Land}/{f.Kapital}", fontIndex: 1, color: ColorRGBA.Navy);
-            Label antwort = new(statWindow, x2, y + (h * i), w, h, $"{a.Land}/{f.Kapital}", fontIndex: 1, color: ColorRGBA.Navy);
+            Label frage = new(statWindow, x, y + (h * i), w, h, $"{f.Land}/{f.Hauptstadt}", fontIndex: 1, color: ColorRGBA.Navy);
+            Label antwort = new(statWindow, x2, y + (h * i), w, h, $"{a.Land}/{a.Hauptstadt}", fontIndex: 1, color: ColorRGBA.Navy);
             Image imga = new(statWindow, a.FlaggePfad, x2 + w + 100, y + (h * i), 50, 30);
             if (a == f)
                 ++score;

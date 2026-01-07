@@ -118,6 +118,7 @@ public class Database
 
     }
 
+    //speichert eine frage in die datenbank
     public void Question_hinzufuegen(int quizID, int frageNummer, Fragen fragen)
     {
         using var conn = new NpgsqlConnection(connString);
@@ -143,6 +144,7 @@ public class Database
 
     }
 
+    //aktualisiert den score von ein quiz
     public void Quiz_score_aktualisieren(int quizID, int score)
     {
         using var conn = new NpgsqlConnection(connString);
@@ -163,6 +165,7 @@ public class Database
         }
     }
 
+    //timestamp fuer beendigung des quiz
     public void Quiz_fertig(int quizID)
     {
         using var conn = new NpgsqlConnection(connString);
@@ -182,6 +185,7 @@ public class Database
         }
     }
 
+    //gibt die top scores zurueck
     public List<Quiz> Quiz_highscore_query(int amount)
     {
         List<Quiz> scores = new();

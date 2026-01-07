@@ -1,5 +1,5 @@
 /* Datei typen */
-public record LaenderDaten(string ISO_code, string Land, string Kapital, string FlaggePfad);
+public record LaenderDaten(string ISO_code, string Land, string Hauptstadt, string FlaggePfad);
 
 public record Benutzer(int BenutzerId, string Alias)
 {
@@ -21,11 +21,11 @@ public enum Quiz_mode
 {
     NICHT_EINGESTELLT = 0,
     FLAGGE_VOM_LAENDER = 1,
-    FLAGGE_VOM_KAPITAL = 2,
+    FLAGGE_VOM_HAUPTSTADT = 2,
     LAENDER_VOM_FLAGGE = 3,
-    LAENDER_VOM_KAPITAL = 4,
-    KAPITAL_VOM_FLAGGE = 5,
-    KAPITAL_VOM_LAENDER = 6
+    LAENDER_VOM_HAUPTSTADT = 4,
+    HAUPTSTADT_VOM_FLAGGE = 5,
+    HAUPTSTADT_VOM_LAENDER = 6
 }
 
 public class Quiz
