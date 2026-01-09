@@ -10,6 +10,7 @@ public class Database
         connString = $"Host=localhost;Username={username};Password={password};Database=geo_quiz";
     }
 
+    //Versucht verbindung
     public bool TestConnection()
     {
         try

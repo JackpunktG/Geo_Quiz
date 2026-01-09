@@ -1,8 +1,10 @@
-/* Datei typen */
+/* --- Datei typen --- */
+
 public record LaenderDaten(string ISO_code, string Land, string Hauptstadt, string FlaggePfad);
 
 public record Benutzer(int BenutzerId, string Alias)
 {
+    //Bei DropdowmMenu generieren ein string mit '\n' zwischen ergebnisse
     public static string DDM_populate(List<Benutzer> benutzer)
     {
         string result = "";
@@ -61,6 +63,13 @@ public class Quiz
 
 public class Fragen
 {
+    /*
+       Erklaerung zum variablen:
+    Ich habe die so gelassen, weil ich wolte, dass die loesungen im eine unterschiedlich stellen platziert werden koennen. 
+    Ich muss ein variable trotzdem speichen um zu wissen welche platz ist die richtiger loesung. 
+    Deswegen habe ich so gelassen.
+    */
+
     public string Frage { get; init; }
     public string Loesung1 { get; init; }
     public string Loesung2 { get; init; }

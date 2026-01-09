@@ -3,11 +3,13 @@ using CimpleUI;
 
 public static class Windows
 {
+    //Window Konstanten
     public const int SCREEN_WIDTH = 1200;
     public const int SCREEN_HEIGHT = 800;
     public const int FRAGEN_MENGE = 10;
     public const float DELTATIME = 0.16f;
 
+    //Enum das Kontrolliert die ablauf des Program
     public enum NextScreen
     {
         EXIT,
@@ -18,17 +20,23 @@ public static class Windows
         ERROR_SCREEN
     }
 
-    public static NextScreen MainMenu(CimpleUIController uiController, Database db, List<Benutzer> benutzer, out int benutzerIndex, out Quiz_mode mode)
+
+    public static NextScreen MainMenu(CimpleUIController uiController, Database db, List<LaenderDaten> laender, List<Benutzer> benutzer, out int benutzerIndex, out Quiz_mode mode)
     {
         //Program Kontrollvariablen
         NextScreen nextScreen = NextScreen.ERROR_SCREEN;
         int _benutzerIndex = Program.BENUTZER_NICHT_EINGESETELLT;
         Quiz_mode _mode = Quiz_mode.NICHT_EINGESTELLT;
         bool running = true;
+        List<FlaggeAnimationSize> animationSizes = FlaggeAnimationSizes();
+
 
 
         //Haupt Fenster elemente
         WindowController mainWindow = new(uiController, "Geo Quiz", SCREEN_WIDTH, SCREEN_HEIGHT);
+
+        //Animated Images
+        List<Image> flaggeAnimations = SetAnimationImages(mainWindow, animationSizes, laender, 15);
 
         Label titleL = new(mainWindow, 100, 50, 950, 50, "Jack's Geo Quiz", fontSize: 50, color: ColorRGBA.Olive);
         Label blurL = new(mainWindow, 550, 80, 300, 100, "Lern Geografie mit spass :)", color: ColorRGBA.Olive);
@@ -36,8 +44,6 @@ public static class Windows
         Button exitB = new(mainWindow, 1050, 50, 100, 30, "Beenden", color: ColorRGBA.Red);
         Button addB = new(mainWindow, 50, 450, 150, 50, "Neu Benutzer", color: ColorRGBA.Maroon);
         Button highScoreB = new(mainWindow, 50, 700, 180, 80, "High Scores", color: ColorRGBA.Purple);
-
-
         Button startB = new(mainWindow, 180, 260, 150, 50, "Spiel starten", color: ColorRGBA.Green);
 
         TextBox addingTb = new(mainWindow, 50, 400, 300, 100);
@@ -106,6 +112,7 @@ public static class Windows
             uiController.Event();
             uiController.Update(DELTATIME);
             uiController.Render(ColorRGBA.Black);
+            UpdateAninimationImages(flaggeAnimations, animationSizes, laender);
         }
 
         //Zuweisung von einstellung
@@ -381,4 +388,56 @@ public static class Windows
         highScoreWindow.Dispose();
         return nextScreen;
     }
+
+
+    /* --- Animationen hilfe functionen und datentyp --- */
+
+    // Record und List Function fuer die unterschiedlich animationen grosse moeglichkeit
+    public record FlaggeAnimationSize(int Width, int Height);
+    public static List<FlaggeAnimationSize> FlaggeAnimationSizes()
+    {
+        List<FlaggeAnimationSize> animationSize = new()
+        {
+        new FlaggeAnimationSize(43, 30),
+        new FlaggeAnimationSize(57, 40),
+        new FlaggeAnimationSize(71, 50),
+        new FlaggeAnimationSize(114, 80),
+        new FlaggeAnimationSize(143, 100),
+        new FlaggeAnimationSize(215, 150),
+        new FlaggeAnimationSize(286, 200),
+        };
+        return animationSize;
+    }
+
+    // List image set-up
+    public static List<Image> SetAnimationImages(WindowController windowController, List<FlaggeAnimationSize> sizes, List<LaenderDaten> laender, int Count)
+    {
+        List<Image> images = new();
+        for (int i = 0; i < Count; ++i)
+        {
+            int randIndex = Random.Shared.Next(0, sizes.Count);
+            Image img = new(windowController, laender[Random.Shared.Next(0, laender.Count)].FlaggePfad, Random.Shared.Next(300, SCREEN_WIDTH) - 100, Random.Shared.Next(100, SCREEN_WIDTH) - 100,
+                sizes[randIndex].Width, sizes[randIndex].Height);
+            images.Add(img);
+        }
+        return images;
+    }
+
+    // Akulizieren von image list for rund der haupt schleife
+    public static void UpdateAninimationImages(List<Image> images, List<FlaggeAnimationSize> sizes, List<LaenderDaten> laender)
+    {
+        for (int i = 0; i < images.Count; ++i)
+        {
+            int change = Random.Shared.Next(0, 5);
+            if (!images[i].ChangeAlpha(-change))
+            {
+                int randIndex = Random.Shared.Next(0, sizes.Count);
+                images[i].Renew(laender[Random.Shared.Next(0, laender.Count)].FlaggePfad, Random.Shared.Next(200, SCREEN_WIDTH - 100), Random.Shared.Next(200, SCREEN_WIDTH - 100),
+                sizes[randIndex].Width, sizes[randIndex].Height);
+                images[i].SetAlpha(255);
+            }
+        }
+    }
+
+
 }

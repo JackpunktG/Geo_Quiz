@@ -6,6 +6,7 @@ public class Program
 
     public static void Main(string[] args)
     {
+        //Erzeug und probiert datenbank verbindung. Wenn kein verbinden, beendet.
         Database db = new("appuser", args[0]);
         if (!db.TestConnection())
         {
@@ -17,9 +18,11 @@ public class Program
         List<Benutzer> benutzer = new();
         List<Fragen> lastFragen = new();
 
+        //Holen die Datei aus den Datenbank
         db.Laender_list_populate(laender);
         db.Benutzer_list_populate(benutzer);
 
+        //Kontrol struct von CimpleUI
         CimpleUIController uiController = new(maxWindows: 2, maxFonts: 3);
 
         uiController.LoadFont("assets/fonts/ACADEROM.ttf", 18);
@@ -31,12 +34,14 @@ public class Program
 
         int index = BENUTZER_NICHT_EINGESETELLT;
         Quiz_mode mode = Quiz_mode.NICHT_EINGESTELLT;
+
+        // Haupt Kontrol ablauf, zeigt unterschiedlichen Fenstern. Je nach dem entscheidung des Benutzer
         while (running)
         {
             switch (screenSelect)
             {
                 case Windows.NextScreen.MAIN_MENU:
-                    screenSelect = Windows.MainMenu(uiController, db, benutzer, out index, out mode);
+                    screenSelect = Windows.MainMenu(uiController, db, laender, benutzer, out index, out mode);
                     break;
                 case Windows.NextScreen.QUIZ_SCREEN:
                     if (index == BENUTZER_NICHT_EINGESETELLT || mode == Quiz_mode.NICHT_EINGESTELLT)
@@ -71,10 +76,7 @@ public class Program
                     break;
             }
         }
-
-
         Console.WriteLine("Exiting application...");
-
     }
 }
 
